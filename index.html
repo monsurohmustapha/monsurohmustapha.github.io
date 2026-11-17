@@ -4,350 +4,999 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Monsuroh Oluwasikemi Mustapha, showcasing writing, corporate communications, content development and digital marketing.">
-  <title>Monsuroh Oluwasikemi Mustapha | Research, Writing & Strategic Communications Portfolio</title>
+  <meta name="description" content="Monsuroh Oluwasikemi Mustapha | Writing, Research and Strategic Communications.">
+  <title>Monsuroh Oluwasikemi Mustapha | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --burgundy: #542333;
-      --burgundy-light: #754453;
-      --beige: #EDE3D8;
-      --cream: #FAF8F5;
-      --white: #FFFFFF;
-      --text: #383333;
-      --muted: #756E6B;
-      --border: #E4DAD2;
+      --navy: #14263f;
+      --navy-soft: #203955;
+      --blue: #526f91;
+      --blue-light: #dce5ee;
+      --blue-pale: #edf2f6;
+      --paper: #f7f8fa;
+      --white: #ffffff;
+      --ink: #263447;
+      --muted: #6c7887;
+      --line: #dfe5eb;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--sans);
       line-height: 1.7;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
-      width: 88%;
-      max-width: 1120px;
-      margin: auto;
+      width: min(1160px, 88%);
+      margin: 0 auto;
     }
 
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 22px 0;
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
     }
 
-    nav {
+    .nav {
+      min-height: 78px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 25px;
     }
 
-    .logo {
-      color: var(--burgundy);
-      font-size: 17px;
-      font-weight: 700;
-      text-decoration: none;
-      letter-spacing: 1px;
+    .brand {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 210px;
     }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 25px;
       list-style: none;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
-      text-decoration: none;
-      font-size: 13px;
-      color: var(--text);
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--burgundy-light);
+      color: var(--blue);
     }
 
+    .nav-contact {
+      border: 1px solid var(--navy);
+      color: var(--navy) !important;
+      padding: 10px 15px;
+    }
+
+    .nav-contact:hover {
+      background: var(--navy);
+      color: var(--white) !important;
+    }
+
+    /* Hero */
+
     .hero {
-      background: var(--beige);
-      padding: 105px 0 95px;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 570px;
+      height: 570px;
+      border: 1px solid rgba(205, 220, 235, 0.15);
+      border-radius: 50%;
+      right: -140px;
+      top: -190px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(205, 220, 235, 0.12);
+      border-radius: 50%;
+      right: -35px;
+      top: -100px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      align-items: center;
+      gap: 55px;
+      padding: 90px 0;
+      position: relative;
+      z-index: 2;
     }
 
     .eyebrow {
-      color: var(--burgundy-light);
-      font-size: 12px;
+      color: #b9cce0;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 2.8px;
       text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      max-width: 780px;
-      color: var(--burgundy);
-      font-family: Georgia, serif;
-      font-size: clamp(38px, 6vw, 65px);
-      font-weight: 400;
-      line-height: 1.12;
       margin-bottom: 25px;
     }
 
-    .hero p {
-      max-width: 650px;
-      font-size: 17px;
-      color: #514848;
-      margin-bottom: 30px;
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 73px);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      max-width: 740px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 em {
+      color: #b9cce0;
+      font-weight: 400;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      color: #d0dbe6;
+      font-size: 14px;
+      line-height: 1.95;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
     }
 
     .primary-link {
       display: inline-block;
-      background: var(--burgundy);
-      color: var(--white);
-      padding: 13px 25px;
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 0.5px;
+      background: #dce5ee;
+      color: var(--navy);
+      padding: 14px 21px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .primary-link:hover {
-      background: var(--burgundy-light);
-    }
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-      color: var(--burgundy);
-      font-family: Georgia, serif;
-      font-size: 36px;
-      font-weight: 400;
-      margin-bottom: 12px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 680px;
-    }
-
-    .about {
       background: var(--white);
+      transform: translateY(-2px);
     }
 
-    .about-content {
-      max-width: 800px;
+    .text-link {
+      color: #e0e8f0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    .about-content p {
+    .text-link:hover {
+      color: #b9cce0;
+    }
+
+    .hero-art {
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .art-frame {
+      width: 260px;
+      height: 320px;
+      border: 1px solid rgba(220, 229, 238, 0.35);
+      padding: 13px;
+      transform: rotate(4deg);
+      position: relative;
+    }
+
+    .art-inner {
+      height: 100%;
+      background: linear-gradient(145deg, #6e87a3 0%, #344d6b 48%, #203650 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .art-inner::before {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 50%;
+      top: 48px;
+      left: 35px;
+    }
+
+    .art-inner::after {
+      content: "";
+      position: absolute;
+      width: 155px;
+      height: 155px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      top: 76px;
+      left: 63px;
+    }
+
+    .art-small {
+      position: relative;
+      z-index: 2;
+      color: #e3eaf1;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .art-letter {
+      position: relative;
+      z-index: 2;
+      color: rgba(255,255,255,0.92);
+      font-family: var(--serif);
+      font-size: 112px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .art-bottom {
+      position: relative;
+      z-index: 2;
+      color: #e3eaf1;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+
+    .hero-index {
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      color: rgba(255,255,255,0.28);
+      font-family: var(--serif);
+      font-size: 85px;
+      line-height: 1;
+    }
+
+    /* Intro strip */
+
+    .intro-strip {
+      background: var(--blue-pale);
+      padding: 22px 0;
+    }
+
+    .strip-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .strip-content span {
+      color: var(--navy-soft);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .strip-dot {
+      color: #8ca1b7 !important;
+      font-size: 15px !important;
+    }
+
+    /* Shared sections */
+
+    section.content-section {
+      padding: 100px 0;
+    }
+
+    .section-topline {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 15px;
+    }
+
+    .section-number {
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .section-rule {
+      width: 42px;
+      height: 1px;
+      background: #aab9c9;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 49px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
       margin-bottom: 18px;
     }
 
-    .corporate {
-      background: var(--beige);
+    .section-description {
+      color: var(--muted);
+      max-width: 690px;
+      font-size: 13px;
+      line-height: 1.95;
     }
 
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+    /* About */
 
-    .experience-card {
+    .about-section {
       background: var(--white);
-      padding: 28px;
-      border: 1px solid var(--border);
     }
 
-    .experience-card h3 {
-      color: var(--burgundy);
-      font-family: Georgia, serif;
-      font-size: 21px;
-      font-weight: 400;
+    .about-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 85px;
+      align-items: start;
+    }
+
+    .about-quote {
+      background: var(--blue-pale);
+      padding: 38px 32px;
+      margin-top: 35px;
+      border-left: 3px solid var(--blue);
+    }
+
+    .quote-mark {
+      color: #91a7bd;
+      font-family: var(--serif);
+      font-size: 56px;
+      line-height: 0.8;
+      margin-bottom: 13px;
+    }
+
+    .about-quote p {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.55;
+    }
+
+    .about-copy {
+      padding-top: 42px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+      margin-bottom: 19px;
+    }
+
+    .about-signoff {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 20px;
+      margin-top: 25px;
+    }
+
+    /* Expertise */
+
+    .expertise-section {
+      background: var(--paper);
+    }
+
+    .expertise-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .expertise-header .section-description {
+      max-width: 390px;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #d8e0e7;
+      border-bottom: 1px solid #d8e0e7;
+    }
+
+    .expertise-card {
+      padding: 28px 22px 32px;
+      border-right: 1px solid #d8e0e7;
+      transition: background 0.25s ease;
+    }
+
+    .expertise-card:first-child {
+      border-left: 1px solid #d8e0e7;
+    }
+
+    .expertise-card:hover {
+      background: var(--white);
+    }
+
+    .expertise-card .number {
+      color: #8ba0b7;
+      font-family: var(--serif);
+      font-size: 32px;
+      margin-bottom: 28px;
+    }
+
+    .expertise-card h3 {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.4;
       margin-bottom: 12px;
     }
 
-    .experience-card p {
+    .expertise-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 11px;
+      line-height: 1.85;
     }
 
-    .portfolio {
-      background: var(--cream);
+    /* Experience */
+
+    .experience-section {
+      background: var(--white);
     }
 
-    .category {
-      margin-bottom: 55px;
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 80px;
     }
 
-    .category-heading {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 15px;
-      margin-bottom: 22px;
+    .experience-aside {
+      position: sticky;
+      top: 120px;
+      align-self: start;
     }
 
-    .category-heading h3 {
-      color: var(--burgundy);
-      font-family: Georgia, serif;
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .category-heading p {
+    .experience-note {
+      margin-top: 28px;
+      padding: 22px;
+      background: var(--blue-pale);
       color: var(--muted);
-      font-size: 14px;
-      margin-top: 7px;
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .experience-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 45px 1fr;
+      gap: 20px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-item .item-number {
+      color: #91a5b9;
+      font-family: var(--serif);
+      font-size: 21px;
+    }
+
+    .experience-item h3 {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .experience-item p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .experience-item a {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-top: 12px;
+    }
+
+    .experience-item a:hover {
+      color: var(--navy);
+    }
+
+    /* Portfolio */
+
+    .portfolio-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .portfolio-section .section-number,
+    .portfolio-section .section-kicker {
+      color: #b9cce0;
+    }
+
+    .portfolio-section .section-rule {
+      background: #7189a3;
+    }
+
+    .portfolio-section .section-title {
+      color: var(--white);
+    }
+
+    .portfolio-section .section-description {
+      color: #c6d2de;
+    }
+
+    .portfolio-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 38px;
+    }
+
+    .portfolio-count {
+      color: #b9cce0;
+      font-family: var(--serif);
+      font-size: 52px;
+      line-height: 1;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 35px;
+    }
+
+    .filter-button {
+      background: transparent;
+      color: #c6d2de;
+      border: 1px solid #52677f;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      transition: all 0.2s ease;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      background: #dce5ee;
+      border-color: #dce5ee;
+      color: var(--navy);
     }
 
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
     }
 
     .work-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 25px;
+      background: #203955;
+      border: 1px solid #344d68;
+      padding: 25px 23px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
     }
 
-    .work-card h4 {
-      color: var(--burgundy);
-      font-size: 17px;
+    .work-card:hover {
+      transform: translateY(-5px);
+      background: #294663;
+      border-color: #8ba0b7;
+    }
+
+    .work-card[hidden] {
+      display: none;
+    }
+
+    .work-category {
+      color: #b9cce0;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .work-card h3 {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.45;
       margin-bottom: 10px;
     }
 
     .work-card p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
+      color: #c6d2de;
+      font-size: 11px;
+      line-height: 1.8;
+      margin-bottom: 22px;
     }
 
     .work-card a {
-      color: var(--burgundy-light);
-      font-size: 13px;
+      color: #dce5ee;
+      font-size: 9px;
       font-weight: 700;
-      text-decoration: none;
-      margin-top: auto;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      align-self: flex-start;
+      border-bottom: 1px solid #8ba0b7;
+      padding-bottom: 5px;
     }
 
     .work-card a:hover {
-      text-decoration: underline;
-    }
-
-    .development {
-      background: var(--white);
-    }
-
-    .simple-list {
-      list-style: none;
-      max-width: 850px;
-    }
-
-    .simple-list li {
-      padding: 13px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-    }
-
-    .closing {
-      background: var(--beige);
-    }
-
-    .closing-content {
-      max-width: 750px;
-    }
-
-    .closing-content p {
-      margin-bottom: 18px;
-    }
-
-    .contact {
-      background: var(--burgundy);
       color: var(--white);
-      text-align: center;
+      border-color: var(--white);
     }
 
-    .contact h2 {
-      font-family: Georgia, serif;
-      font-size: 36px;
-      font-weight: 400;
-      margin-bottom: 15px;
+    /* Development */
+
+    .development-section {
+      background: var(--blue-pale);
     }
 
-    .contact p {
-      color: #E9DDE0;
-      margin-bottom: 25px;
+    .development-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      margin-top: 40px;
     }
 
-    .contact a {
-      display: inline-block;
-      color: var(--burgundy);
+    .development-panel {
       background: var(--white);
-      padding: 12px 25px;
-      text-decoration: none;
-      font-size: 13px;
+      padding: 32px;
+      border: 1px solid #dce4eb;
     }
+
+    .development-panel h3 {
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .development-list {
+      list-style: none;
+    }
+
+    .development-list li {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .development-list strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* Contact */
+
+    .contact-section {
+      background: #e5ebf1;
+      padding: 85px 0;
+    }
+
+    .contact-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .contact-section .section-title {
+      max-width: 580px;
+      margin-bottom: 13px;
+    }
+
+    .contact-section .section-description {
+      max-width: 560px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 15px 24px;
+      white-space: nowrap;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-button:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
 
     footer {
-      background: #3E1A27;
-      color: #E9DDE0;
-      padding: 23px 0;
-      text-align: center;
-      font-size: 12px;
+      background: #0e1e32;
+      color: #c2ceda;
+      padding: 25px 0;
     }
 
-    @media (max-width: 700px) {
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 16px;
+    }
+
+    .footer-copy {
+      font-size: 9px;
+      letter-spacing: 0.5px;
+    }
+
+    .back-top {
+      color: #c2ceda;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .back-top:hover {
+      color: var(--white);
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px 20px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr 0.6fr;
+        gap: 20px;
+      }
+
+      .hero-art {
+        transform: scale(0.85);
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .expertise-card:nth-child(3) {
+        border-left: 1px solid #d8e0e7;
+      }
+
+      .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-layout {
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 650px) {
       .container {
         width: 90%;
       }
 
-      nav {
-        align-items: flex-start;
-        flex-direction: column;
+      section.content-section {
+        padding: 70px 0;
       }
 
-      .nav-links {
-        gap: 12px 18px;
+      .hero-layout {
+        grid-template-columns: 1fr;
+        padding: 75px 0 60px;
       }
 
       .hero {
-        padding: 75px 0;
+        min-height: auto;
       }
 
-      section {
-        padding: 65px 0;
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
       }
 
-      .experience-grid,
+      .hero-art {
+        min-height: 240px;
+        transform: scale(0.72);
+        margin: -25px 0;
+      }
+
+      .hero-index {
+        display: none;
+      }
+
+      .strip-content {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .strip-content span {
+        font-size: 8px;
+      }
+
+      .about-layout,
+      .experience-layout,
+      .development-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .about-copy {
+        padding-top: 0;
+      }
+
+      .about-quote {
+        margin-top: 22px;
+      }
+
+      .expertise-header,
+      .portfolio-heading {
+        display: block;
+      }
+
+      .expertise-header .section-description {
+        margin-top: 15px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .expertise-card {
+        padding: 22px 16px;
+      }
+
+      .expertise-card h3 {
+        font-size: 17px;
+      }
+
+      .experience-aside {
+        position: static;
+      }
+
       .work-grid {
         grid-template-columns: 1fr;
       }
 
-      .section-heading h2 {
-        font-size: 30px;
+      .work-card {
+        min-height: 185px;
+      }
+
+      .portfolio-count {
+        font-size: 38px;
+        margin-top: 20px;
+      }
+
+      .development-panel {
+        padding: 23px;
+      }
+
+      .contact-layout {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-card,
+      .expertise-card:first-child,
+      .expertise-card:nth-child(3) {
+        border-left: 1px solid #d8e0e7;
+      }
+
+      .nav-links {
+        gap: 12px;
       }
     }
   </style>
@@ -355,17 +1004,18 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#" class="logo">MONSUROH MUSTAPHA.</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand">Monsuroh Oluwasikemi Mustapha</a>
 
+      <nav aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#corporate">Corporate Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#development">Development</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#expertise">EXPERTISE</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#development">DEVELOPMENT</a></li>
+          <li><a href="#contact" class="nav-contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
@@ -373,405 +1023,530 @@
 
   <main>
 
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">Writing / Research / Strategic Communications</p>
+
+          <h1>Thoughtful research. <em>Clear communication.</em> Compelling stories.</h1>
+
+          <p class="hero-description">
+            I work across corporate communications, research, content development
+            and editorial writing, translating information and ideas into clear,
+            purposeful communication.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="primary-link">EXPLORE MY WORK ↗</a>
+            <a href="#about" class="text-link">MORE ABOUT ME ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-frame">
+            <div class="art-inner">
+              <span class="art-small">WORDS &amp; IDEAS</span>
+              <span class="art-letter">M</span>
+              <span class="art-bottom">WRITING · RESEARCH · INSIGHT</span>
+            </div>
+          </div>
+          <span class="hero-index">01</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+      <div class="container strip-content">
+        <span>Corporate Communications</span>
+        <span class="strip-dot">•</span>
+        <span>Research &amp; Reporting</span>
+        <span class="strip-dot">•</span>
+        <span>Content Development</span>
+        <span class="strip-dot">•</span>
+        <span>Editorial Writing</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="content-section about-section" id="about">
+      <div class="container about-layout">
+        <div>
+          <div class="section-topline">
+            <span class="section-number">01</span>
+            <span class="section-rule"></span>
+            <span class="section-kicker">A little about me</span>
+          </div>
+
+          <h2 class="section-title">The thinking behind the words.</h2>
+
+          <div class="about-quote">
+            <div class="quote-mark">“</div>
+            <p>Good communication starts with understanding what needs to be said, why it matters and who needs to hear it.</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            I am a writer and communications professional with experience
+            spanning corporate reporting, financial and business writing,
+            strategic communications, research and digital content development.
+          </p>
+
+          <p>
+            My work involves developing and refining content for different
+            audiences, from corporate and executive communications to articles,
+            website copy and creative writing.
+          </p>
+
+          <p>
+            I enjoy working with information, ideas and narratives: researching
+            subjects, identifying what matters and shaping the material into
+            communication that is clear, considered and engaging.
+          </p>
+
+          <p>
+            Across these areas, I bring an interest in language, attention to
+            detail and a commitment to making information easier to understand.
+          </p>
+
+          <div class="about-signoff">Monsuroh Oluwasikemi Mustapha</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="content-section expertise-section" id="expertise">
       <div class="container">
-        <div class="eyebrow">Writing · Communications · Content Strategy</div>
+        <div class="expertise-header">
+          <div>
+            <div class="section-topline">
+              <span class="section-number">02</span>
+              <span class="section-rule"></span>
+              <span class="section-kicker">Areas of practice</span>
+            </div>
+            <h2 class="section-title">What I bring to the page.</h2>
+          </div>
 
-        <h1>Research, Writing & Strategic Thinking.</h1>
+          <p class="section-description">
+            A combination of research, writing and communications experience
+            across corporate, digital and editorial environments.
+          </p>
+        </div>
 
-        <p>
-          I'm Monsuroh Oluwasikemi Mustapha, a writer and communications
-          professional with experience across corporate reporting,
-          financial communications, digital content development and
-          creative writing.
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <div class="number">01</div>
+            <h3>Strategic Communications</h3>
+            <p>Corporate narratives, executive communications and organisational messaging.</p>
+          </article>
+
+          <article class="expertise-card">
+            <div class="number">02</div>
+            <h3>Research &amp; Reporting</h3>
+            <p>Research, information analysis and the development of structured reporting content.</p>
+          </article>
+
+          <article class="expertise-card">
+            <div class="number">03</div>
+            <h3>Content Development</h3>
+            <p>Content planning, editorial development and audience-focused communication.</p>
+          </article>
+
+          <article class="expertise-card">
+            <div class="number">04</div>
+            <h3>Editorial &amp; Creative Writing</h3>
+            <p>Articles, essays, scripts and narrative writing across different subjects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="content-section experience-section" id="experience">
+      <div class="container experience-layout">
+        <div class="experience-aside">
+          <div class="section-topline">
+            <span class="section-number">03</span>
+            <span class="section-rule"></span>
+            <span class="section-kicker">Professional experience</span>
+          </div>
+
+          <h2 class="section-title">Writing for organisations and audiences.</h2>
+
+          <p class="section-description">
+            Work across corporate reporting, business communications and
+            digital content.
+          </p>
+
+          <div class="experience-note">
+            Some corporate assignments involve confidential client information.
+            This section therefore describes the nature of my work without
+            reproducing restricted materials.
+          </div>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <span class="item-number">01</span>
+            <div>
+              <h3>Annual &amp; Sustainability Reporting</h3>
+              <p>
+                Contributing to annual and sustainability reporting through
+                research, content development, narrative refinement and the
+                organisation of information across report sections.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="item-number">02</span>
+            <div>
+              <h3>Corporate Governance Communications</h3>
+              <p>
+                Developing and refining governance-related content, including
+                board and committee information, governance narratives and
+                supporting report disclosures.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="item-number">03</span>
+            <div>
+              <h3>Financial &amp; Business Writing</h3>
+              <p>
+                Writing and editing content relating to business activities,
+                financial performance and organisational developments.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="item-number">04</span>
+            <div>
+              <h3>Press Releases &amp; Corporate Communications</h3>
+              <p>
+                Developing corporate announcements and communication materials
+                with attention to clarity, accuracy, tone and audience.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="item-number">05</span>
+            <div>
+              <h3>Research &amp; Content Development</h3>
+              <p>
+                Researching subject areas, reviewing source information and
+                translating findings into organised, accessible content.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="item-number">06</span>
+            <div>
+              <h3>Website Copywriting</h3>
+              <p>
+                Developing website copy for Primus Ige, covering brand
+                communication and customer-facing website content.
+              </p>
+              <a href="https://primusige.com/" target="_blank" rel="noopener noreferrer">VISIT PRIMUS IGE WEBSITE ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="content-section portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="portfolio-heading">
+          <div>
+            <div class="section-topline">
+              <span class="section-number">04</span>
+              <span class="section-rule"></span>
+              <span class="section-kicker">Selected work</span>
+            </div>
+
+            <h2 class="section-title">A collection of words and ideas.</h2>
+
+            <p class="section-description">
+              Published articles, scripts, essays and content projects across
+              different subjects, formats and audiences. Select a category
+              to explore the work.
+            </p>
+          </div>
+
+          <div class="portfolio-count">01—05</div>
+        </div>
+
+        <div class="filter-bar" aria-label="Filter portfolio work">
+          <button class="filter-button active" data-filter="all" aria-pressed="true">ALL WORK</button>
+          <button class="filter-button" data-filter="articles" aria-pressed="false">ARTICLES</button>
+          <button class="filter-button" data-filter="essays" aria-pressed="false">ESSAYS</button>
+          <button class="filter-button" data-filter="scripts" aria-pressed="false">SCRIPTS</button>
+          <button class="filter-button" data-filter="creative" aria-pressed="false">CREATIVE</button>
+          <button class="filter-button" data-filter="strategy" aria-pressed="false">CONTENT STRATEGY</button>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- Articles -->
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">DevFest Lagos 2026 · Medium</p>
+              <h3>Applying for Jobs Isn't Enough: Here's What You Should Be Doing Instead</h3>
+            </div>
+            <a href="https://medium.com/@gdglagos/applying-for-jobs-isnt-enough-here-s-what-you-should-be-doing-instead-45cd6c558a3a" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">DevFest Lagos 2026</p>
+              <h3>Your Dream Job Probably Isn't Going to Find You at Home</h3>
+            </div>
+            <a href="https://docs.google.com/document/d/19K1qs0QX1MoYgYCnD8SdeLJr5S2U7dCEEKXKUtuZ-gA/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">Casacito</p>
+              <h3>Types of Homes You Can Own or Rent</h3>
+            </div>
+            <a href="https://casacito.com/2025/07/types-of-homes-you-can-own-or-rent/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">Casacito</p>
+              <h3>Shared Flats: A Smart Way to Live in African Cities</h3>
+            </div>
+            <a href="http://casacito.com/2025/07/shared-flats-a-smart-way-to-live-in-african-cities/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">Casacito</p>
+              <h3>Why Infrastructure Affects Home Value and Daily Life in West African Estates</h3>
+            </div>
+            <a href="http://casacito.com/2025/07/why-infrastructure-affects-home-value-and-daily-life-in-west-african-estates/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">The Creator Hive</p>
+              <h3>K-drama Is the New Trend: Stop Snoozing</h3>
+            </div>
+            <a href="https://thecreatorhive.wordpress.com/2022/12/17/kdrama-is-the-new-trend-stop-snoozing/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">The Creator Hive</p>
+              <h3>Far Away from Home: Are You Watching the Main Plot or the Other Plot?</h3>
+            </div>
+            <a href="https://thecreatorhive.wordpress.com/2022/12/26/are-you-watching-far-from-home-for-the-main-plot-or-the-other-plot/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <article class="work-card" data-category="articles">
+            <div>
+              <p class="work-category">The Creator Hive</p>
+              <h3>How to Make Your December 'Detty' from the Comfort of Your Home</h3>
+            </div>
+            <a href="https://thecreatorhive.wordpress.com/2022/12/17/make-your-december-detty-from-the-comfort-of-your-home/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </article>
+
+          <!-- Essays -->
+          <article class="work-card" data-category="essays">
+            <div>
+              <p class="work-category">Medium</p>
+              <h3>Nowadays</h3>
+            </div>
+            <a href="https://medium.com/@monsuroholuwasikemi/nowadays-acf3b291e032" target="_blank" rel="noopener noreferrer">Read essay ↗</a>
+          </article>
+
+          <article class="work-card" data-category="essays">
+            <div>
+              <p class="work-category">Medium</p>
+              <h3>Embracing the Fullness of Our Humanity: Sadness and Depression Do Not Diminish Our Worth as People</h3>
+            </div>
+            <a href="https://medium.com/@monsuroholuwasikemi/embracing-the-fullness-of-our-humanity-sadness-and-depression-do-not-diminish-our-worth-as-people-6f2a54b5b6d" target="_blank" rel="noopener noreferrer">Read essay ↗</a>
+          </article>
+
+          <article class="work-card" data-category="essays">
+            <div>
+              <p class="work-category">Medium</p>
+              <h3>Friendship Without Reciprocity Is Bondage</h3>
+            </div>
+            <a href="https://medium.com/@monsuroholuwasikemi/friendship-without-reciprocity-is-bondage-2eded390d28d" target="_blank" rel="noopener noreferrer">Read essay ↗</a>
+          </article>
+
+          <article class="work-card" data-category="essays">
+            <div>
+              <p class="work-category">Non-fiction writing</p>
+              <h3>Non-fiction Writing Sample</h3>
+            </div>
+            <a href="https://drive.google.com/file/d/1ZoNI4DbmSGaQkuJJjw-67fmNoXXZHX8D/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">View sample ↗</a>
+          </article>
+
+          <!-- Scripts -->
+          <article class="work-card" data-category="scripts">
+            <div>
+              <p class="work-category">Short story</p>
+              <h3>For You</h3>
+              <p>A story exploring relationships, betrayal and human connection.</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1BiCd23yHX5Kq-q-1pBxa4brdWjfTfDxw/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Read script ↗</a>
+          </article>
+
+          <article class="work-card" data-category="scripts">
+            <div>
+              <p class="work-category">Screenplay</p>
+              <h3>10:13</h3>
+              <p>A ten-minute screenplay exploring life's unpredictability and the race against time.</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1cuNhpW7GeXP7h_xBBIorTfo-6o88eVdB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Read script ↗</a>
+          </article>
+
+          <article class="work-card" data-category="scripts">
+            <div>
+              <p class="work-category">YouTube script</p>
+              <h3>Satou Sabally's Road to Recovery</h3>
+              <p>A script about the WNBA player's recovery journey.</p>
+            </div>
+            <a href="https://docs.google.com/document/d/1apnMg6axEwCjw6hQIsiBpeSnDxGxrmSjpFhfdyK5tXw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read script ↗</a>
+          </article>
+
+          <!-- Creative -->
+          <article class="work-card" data-category="creative">
+            <div>
+              <p class="work-category">Fiction · First draft</p>
+              <h3>Chapter One: First Draft</h3>
+            </div>
+            <a href="https://docs.google.com/file/d/11T0eLqxoBhLKqMF4JvmnWgedmC9yRNY2/edit?usp=docslist_api&amp;filetype=msword" target="_blank" rel="noopener noreferrer">View sample ↗</a>
+          </article>
+
+          <!-- Strategy -->
+          <article class="work-card" data-category="strategy">
+            <div>
+              <p class="work-category">Team project · Terra Learning</p>
+              <h3>Digital Marketing Plan for Kuda</h3>
+              <p>A team assignment outlining a digital content approach and content calendar.</p>
+            </div>
+            <a href="https://hakeemat.hashnode.dev/digital-marketing-plan-for-kuda-december" target="_blank" rel="noopener noreferrer">View project ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT -->
+    <section class="content-section development-section" id="development">
+      <div class="container">
+        <div class="section-topline">
+          <span class="section-number">05</span>
+          <span class="section-rule"></span>
+          <span class="section-kicker">Learning &amp; development</span>
+        </div>
+
+        <h2 class="section-title">Building knowledge. Developing the craft.</h2>
+
+        <p class="section-description">
+          Selected courses and recognition reflecting continued learning
+          across communications, writing, finance and digital content.
         </p>
 
-        <a href="#portfolio" class="primary-link">EXPLORE MY WORK</a>
-      </div>
-    </section>
+        <div class="development-layout">
+          <div class="development-panel">
+            <h3>Courses &amp; Certifications</h3>
+            <ul class="development-list">
+              <li><strong>Fundamentals of Media Relations</strong> · Muck Rack</li>
+              <li><strong>Writing for Strategic Communications</strong> · The Ohio State University</li>
+              <li><strong>Fundamentals of Digital Marketing</strong> · Google Digital Garage</li>
+              <li><strong>Investor Relations</strong> · Udemy</li>
+              <li><strong>Financial Modelling and Risk Management</strong> · Coursera</li>
+              <li><strong>Strategic Communication and Writing</strong> · TWWT</li>
+              <li><strong>Strategy of Content Marketing</strong> · Coursera</li>
+              <li><strong>Digital Marketing and Content Creator</strong> · Terra Learning</li>
+              <li><strong>The Art of Storytelling</strong> · Khan Academy</li>
+              <li><strong>Microsoft Excel: Beginner to Advanced</strong> · Udemy</li>
+              <li><strong>Microsoft PowerPoint: Beginner to Advanced</strong> · Udemy</li>
+            </ul>
+          </div>
 
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Introduction</div>
-          <h2>About Me</h2>
-        </div>
-
-        <div class="about-content">
-          <p>
-            I'm a writer with experience across different forms of
-            communication, from creative storytelling and digital
-            content to corporate and financial communications.
-          </p>
-
-          <p>
-            My work spans scriptwriting, blog writing, personal essays,
-            corporate reporting, press releases and financial articles.
-            I enjoy working across subjects and adapting my writing
-            approach to different audiences, formats and communication
-            objectives.
-          </p>
-
-          <p>
-            I'm interested in how research, clear writing and thoughtful
-            storytelling can make complex ideas easier to understand
-            and communicate.
-          </p>
+          <div class="development-panel">
+            <h3>Awards &amp; Recognition</h3>
+            <ul class="development-list">
+              <li><strong>Scriptwriter, Best Drama Performance</strong> · Lagos State NYSC Camp, 2024 Batch B2, Platoon 3</li>
+              <li><strong>Best Orator</strong> · High school debate</li>
+              <li><strong>Mediation Leader</strong> · Platoon 3, Lagos State NYSC Orientation Camp</li>
+              <li><strong>Creative Recognition</strong> · Recognised for artistic ability during middle school</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="corporate" id="corporate">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Professional Experience</div>
-          <h2>Corporate Writing & Financial Communications</h2>
-          <p>
-            Experience supporting the development, structuring and
-            refinement of corporate content across reporting,
-            financial communications and stakeholder engagement.
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-layout">
+        <div>
+          <div class="section-topline">
+            <span class="section-number">06</span>
+            <span class="section-rule"></span>
+            <span class="section-kicker">Get in touch</span>
+          </div>
+
+          <h2 class="section-title">Have a project or opportunity in mind?</h2>
+
+          <p class="section-description">
+            For writing, research and strategic communications opportunities,
+            I'd be pleased to hear from you.
           </p>
         </div>
 
-        <div class="experience-grid">
-
-          <div class="experience-card">
-            <h3>Annual & Sustainability Reporting</h3>
-            <p>
-              Experience contributing to annual reporting and
-              sustainability-related content, including corporate
-              narratives, executive statements and reporting disclosures.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <h3>Corporate Governance Communications</h3>
-            <p>
-              Experience developing and refining governance-related
-              content, communicating board oversight, governance
-              structures and corporate practices.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <h3>Financial Writing & Business Communications</h3>
-            <p>
-              Experience working on financial articles and business
-              communications, translating financial and business
-              information into clear written content.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <h3>Press Releases & Corporate Communications</h3>
-            <p>
-              Experience preparing and refining press releases,
-              corporate announcements and other stakeholder-facing
-              communications.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Selected Work</div>
-          <h2>Writing Portfolio</h2>
-          <p>
-            A selection of writing and content development work across
-            different subjects, formats and audiences.
-          </p>
-        </div>
-
-        <!-- SCRIPTWRITING -->
-
-        <div class="category">
-          <div class="category-heading">
-            <h3>01. Scriptwriting</h3>
-            <p>Stories and scripts developed for different formats and audiences.</p>
-          </div>
-
-          <div class="work-grid">
-
-            <div class="work-card">
-              <h4>For You</h4>
-              <p>
-                A short story exploring personal relationships, betrayal
-                and the challenges that shape human connections.
-              </p>
-              <a href="https://drive.google.com/file/d/1BiCd23yHX5Kq-q-1pBxa4brdWjfTfDxw/view?usp=drivesdk"
-                 target="_blank" rel="noopener noreferrer">READ THE SAMPLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>10:13</h4>
-              <p>
-                A 10-minute screenplay exploring the diversity and
-                unpredictability of life, where every moment can change
-                everything.
-              </p>
-              <a href="https://drive.google.com/file/d/1cuNhpW7GeXP7h_xBBIorTfo-6o88eVdB/view?usp=drivesdk"
-                 target="_blank" rel="noopener noreferrer">READ THE SAMPLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Satou Sabally's Road to Recovery</h4>
-              <p>
-                A YouTube script examining WNBA player Satou Sabally's
-                recovery journey, the challenges she has faced and the
-                prospects of her return to the court.
-              </p>
-              <a href="https://docs.google.com/document/d/1apnMg6axEwCjw6hQISIBpeSnDxGxrmSjpFhfdyK5tXw/edit"
-                 target="_blank" rel="noopener noreferrer">READ THE SCRIPT ↗</a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- BLOG WRITING -->
-
-        <div class="category">
-          <div class="category-heading">
-            <h3>02. Blog Writing & Content Development</h3>
-            <p>Articles developed across technology, real estate, entertainment and lifestyle.</p>
-          </div>
-
-          <div class="work-grid">
-
-            <div class="work-card">
-              <h4>Applying for Jobs Isn't Enough: Here's What You Should Be Doing Instead</h4>
-              <p>
-                A DevFest Lagos 2026 article exploring proactive
-                approaches to career development beyond submitting
-                job applications.
-              </p>
-              <a href="https://medium.com/@gdglagos/applying-for-jobs-isnt-enough-here-s-what-you-should-be-doing-instead-45cd6c558a3a"
-                 target="_blank" rel="noopener noreferrer">READ ON MEDIUM ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Your Dream Job Probably Isn't Going to Find You at Home</h4>
-              <p>
-                A DevFest Lagos 2026 article encouraging readers to take
-                an active role in pursuing career opportunities.
-              </p>
-              <a href="https://docs.google.com/document/d/19K1qs0QX1MoYgYCnD8SdeLJr5S2U7dCEEKXKUtuZ-gA/edit?usp=drivesdk"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Types of Homes You Can Own or Rent</h4>
-              <p>
-                A Casacito article exploring different housing options.
-              </p>
-              <a href="https://casacito.com/2025/07/types-of-homes-you-can-own-or-rent/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Shared Flats: A Smart Way to Live in African Cities</h4>
-              <p>
-                An article examining shared living and housing options
-                in African cities.
-              </p>
-              <a href="https://casacito.com/2025/07/shared-flats-a-smart-way-to-live-in-african-cities/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Why Infrastructure Affects Home Value and Daily Life in West African Estates</h4>
-              <p>
-                An article exploring the relationship between
-                infrastructure, residential property value and
-                everyday living.
-              </p>
-              <a href="https://casacito.com/2025/07/why-infrastructure-affects-home-value-and-daily-life-in-west-african-estates/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>K-drama Is the New Trend: Stop Snoozing</h4>
-              <p>
-                A Creator Hive article examining the growing appeal
-                of Korean dramas and recommendations for viewers.
-              </p>
-              <a href="https://thecreatorhive.wordpress.com/2022/12/17/kdrama-is-the-new-trend-stop-snoozing/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Netflix Nollywood Series Far Away from Home</h4>
-              <p>
-                An entertaining take on the storylines and viewing
-                experience of the Netflix series.
-              </p>
-              <a href="https://thecreatorhive.wordpress.com/2022/12/26/are-you-watching-far-from-home-for-the-main-plot-or-the-other-plot/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>How to Make Your December 'Detty' from the Comfort of Your Home</h4>
-              <p>
-                Ideas for enjoying the festive season without going out.
-              </p>
-              <a href="https://thecreatorhive.wordpress.com/2022/12/17/make-your-december-detty-from-the-comfort-of-your-home/"
-                 target="_blank" rel="noopener noreferrer">READ THE ARTICLE ↗</a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- PERSONAL ESSAYS -->
-
-        <div class="category">
-          <div class="category-heading">
-            <h3>03. Personal Essays & Reflective Writing</h3>
-            <p>
-              Pieces exploring emotional wellbeing, human relationships
-              and how people understand themselves and others.
-            </p>
-          </div>
-
-          <div class="work-grid">
-
-            <div class="work-card">
-              <h4>Nowadays</h4>
-              <p>
-                A reflection on contemporary mental health concerns
-                and the experiences people navigate in everyday life.
-              </p>
-              <a href="https://medium.com/@monsuroholuwasikemi/nowadays-acf3b291e032"
-                 target="_blank" rel="noopener noreferrer">READ THE ESSAY ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Embracing the Fullness of Our Humanity</h4>
-              <p>
-                An article exploring human worth and the importance
-                of recognising difficult emotional experiences.
-              </p>
-              <a href="https://medium.com/@monsuroholuwasikemi/embracing-the-fullness-of-our-humanity-sadness-and-depression-do-not-diminish-our-worth-as-people-6f2a54b5b6d"
-                 target="_blank" rel="noopener noreferrer">READ THE ESSAY ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Friendship Without Reciprocity Is Bondage</h4>
-              <p>
-                A reflection on mutual effort, boundaries and
-                reciprocity in friendships.
-              </p>
-              <a href="https://medium.com/@monsuroholuwasikemi/friendship-without-reciprocity-is-bondage-2eded390d28d"
-                 target="_blank" rel="noopener noreferrer">READ THE ESSAY ↗</a>
-            </div>
-
-            <div class="work-card">
-              <h4>Non-fiction Writing Sample</h4>
-              <p>
-                An early non-fiction piece developed during the
-                COVID-19 period in response to a writing prompt.
-              </p>
-              <a href="https://drive.google.com/file/d/1ZoNI4DbmSGaQkuJJjw-67fmNoXXZHX8D/view?usp=drivesdk"
-                 target="_blank" rel="noopener noreferrer">READ THE PIECE ↗</a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CREATIVE WRITING -->
-
-        <div class="category">
-          <div class="category-heading">
-            <h3>04. Creative Writing</h3>
-            <p>Longer-form storytelling and creative exploration.</p>
-          </div>
-
-          <div class="work-grid">
-            <div class="work-card">
-              <h4>Chapter One: First Draft</h4>
-              <p>
-                An opening chapter from a creative writing project
-                in progress, demonstrating an interest in storytelling
-                and longer-form narrative development.
-              </p>
-              <a href="https://docs.google.com/file/d/11T0eLqxoBhLKqMF4JvmnWgedmC9yRNY2/edit?usp=docslist_api&filetype=msword"
-                 target="_blank" rel="noopener noreferrer">READ THE DRAFT ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DIGITAL MARKETING -->
-
-        <div class="category">
-          <div class="category-heading">
-            <h3>05. Digital Marketing & Content Strategy</h3>
-            <p>Content planning and digital marketing development.</p>
-          </div>
-
-          <div class="work-grid">
-            <div class="work-card">
-              <h4>Digital Marketing Plan for Kuda</h4>
-              <p>
-                A sample digital marketing plan developed as part
-                of a team assignment during an internship at
-                Terra Learning. The document outlines a proposed
-                content approach and includes a content calendar.
-              </p>
-              <a href="https://hakeemat.hashnode.dev/digital-marketing-plan-for-kuda-december"
-                 target="_blank" rel="noopener noreferrer">READ THE MARKETING PLAN ↗</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  
-
-    <section class="closing">
-      <div class="container">
-        <div class="closing-content">
-          <div class="eyebrow">A Final Note</div>
-          <h2 style="color: var(--burgundy); font-family: Georgia, serif; font-size: 32px; font-weight: 400; margin-bottom: 20px;">
-            Writing is a craft I continue to develop.
-          </h2>
-
-          <p>
-            Through practice, research, feedback and continued learning,
-            I remain interested in refining my skills, taking on new
-            challenges and contributing to projects that value thoughtful
-            storytelling and engaging content.
-          </p>
-
-          <p>
-            Thank you for taking the time to explore my work.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let's Connect</h2>
-        <p>
-          For writing, research, communications and content development
-          opportunities, you can reach me by email.
-        </p>
-
-        <!-- Replace the placeholder email address below -->
-        <a href="mailto:oluwasikemi00@gmail.com">GET IN TOUCH</a>
+        <a class="contact-button" href="mailto:your@email.com">LET'S CONNECT ↗</a>
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      © 2026 Monsuroh Oluwasikemi Mustapha. All rights reserved.
+    <div class="container footer-content">
+      <span class="footer-name">Monsuroh Oluwasikemi Mustapha</span>
+      <span class="footer-copy">© 2026 · ALL RIGHTS RESERVED</span>
+      <a class="back-top" href="#home">BACK TO TOP ↑</a>
     </div>
   </footer>
+
+  <!-- PORTFOLIO FILTER -->
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const workCards = document.querySelectorAll(".work-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+
+        workCards.forEach((card) => {
+          const category = card.dataset.category;
+          card.hidden = selectedFilter !== "all" && category !== selectedFilter;
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
