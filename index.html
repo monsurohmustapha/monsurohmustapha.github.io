@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f6;
+      color: #252c35;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #172b43;
+      color: white;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 100px 10%;
+      background: #e9eef2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin-top: 15px;
+    }
+
+    h1 {
+      font-size: 46px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #172b43;
+    }
+
+    section {
+      padding: 65px 10%;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #e2e5e8;
+    }
+
+    .project a {
+      color: #315d80;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #172b43;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 34px; }
+      header a { margin-left: 0; margin-right: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <strong>MY PORTFOLIO</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">My Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Your Name</h1>
+    <p>Research | Writing | Strategy</p>
+    <p>
+      Welcome to my professional portfolio. This space
+      showcases my selected projects, research,
+      professional experience and written work.
+    </p>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Write a short introduction about your professional
+      background, interests, experience and areas of expertise.
+    </p>
+  </section>
+
+  <section id="work">
+    <h2>Selected Work</h2>
+    <div class="projects">
+
+      <div class="project">
+        <h3>Writing & Communications</h3>
+        <p>Selected articles, reports and communication projects.</p>
+        <a href="#">Explore projects</a>
+      </div>
+
+      <div class="project">
+        <h3>Research & Analysis</h3>
+        <p>Research projects, industry reviews and benchmarking.</p>
+        <a href="#">Explore projects</a>
+      </div>
+
+      <div class="project">
+        <h3>Strategy & Consulting</h3>
+        <p>Strategic projects, case studies and business insights.</p>
+        <a href="#">Explore projects</a>
+      </div>
+
+      <div class="project">
+        <h3>Corporate Reporting</h3>
+        <p>Corporate reporting, governance and sustainability work.</p>
+        <a href="#">Explore projects</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Connect with me professionally.</p>
+    <p>
+      <a href="https://www.linkedin.com/">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name | Professional Portfolio</p>
+  </footer>
+
+</body>
+</html>
